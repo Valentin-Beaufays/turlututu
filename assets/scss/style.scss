@@ -1,3 +1,5 @@
+$max-resolution: 1140px;
+
 * {
     box-sizing: border-box;
 }
@@ -15,30 +17,32 @@ body {
 }
 
 .navbar {
-    max-width: 1140px;
+    max-width: $max-resolution;
     margin : auto;
     padding : 10px 0;
     display: flex;
     justify-content: space-between;
+        
+        a{
+            color:white;
+            text-decoration: none;
+        }
+
+        .navlist{
+            display : flex;
+            margin : 0;
+            padding : 0;
+            justify-content: space-around;
+            width: 600px;
+                
+                .navItem{
+                    list-style: none;
+            
+                }
+        }
 }
 
-.navlist{
-    display : flex;
-    margin : 0;
-    padding : 0;
-    justify-content: space-around;
-    width: 600px;
-}
 
-.navItem{
-    list-style: none;
-
-}
-
-.navbar a{
-    color:white;
-    text-decoration: none;
-}
 
 .debug {
     border : 1px solid red;
@@ -50,29 +54,29 @@ body {
 }
 
 header{
-    max-width: 1140px;
+    max-width: $max-resolution;
     margin: auto;
     display: flex;
-}
 
-.logoget{
-    width:33%;
-}
+    .logoget{
+        width:33%;
+    }
+    
+    .titre{
+        width:33%;
+        text-align:center;
+        display: flex;
+        flex-flow: column;
+    }
 
-.titre{
-    width:33%;
-    text-align:center;
-    display: flex;
-    flex-flow: column;
-}
-
-.btnTop{
-    padding: 20px;
-    border-radius: 15px;
-    background-color:#E99002;
-    border: 1px solid white;
-    color:white;
-    text-decoration: none;
+    .btnTop{
+        padding: 20px;
+        border-radius: 15px;
+        background-color:#E99002;
+        border: 1px solid white;
+        color:white;
+        text-decoration: none;
+    }
 }
 
 .sousTitre{
@@ -82,21 +86,23 @@ header{
 .grille{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1140px;
+    max-width: $max-resolution;
     justify-content: space-around;
     margin: auto;
+
+    .texte{
+        width:48%;
+    }
 }
 
 .greybackground{
     background-color: #EEE;
 }
 
-.texte{
-    width:48%;
-}
+
 
 .brandsimg{
-    max-width: 1140px;
+    max-width: $max-resolution;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -128,7 +134,7 @@ footer{
 
 .bottomButton{
     display:flex;
-    max-width: 1140px;
+    max-width: $max-resolution;
     text-align:center;
     margin: auto;
 }
